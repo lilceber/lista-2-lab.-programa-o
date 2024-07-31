@@ -1,0 +1,42 @@
+#include <stdio.h>
+int main() {
+ int x;
+ 
+ printf("o programa só será encerrado quando você teclar 0.\n");
+ 
+do {
+    
+ printf("\ndigite um número de 1 a 7 para descobrir qual dia da semana ele representa: \n");
+ scanf("%d",&x);
+
+    switch(x){
+    case 1:
+        printf ("domingo\n");
+        break;
+    case 2:
+        printf ("segunda-feira\n");
+        break;
+    case 3:
+        printf ("terça-feira\n");
+        break;        
+    case 4:
+        printf ("quarta-feira\n");
+        break;
+    case 5:
+        printf ("quinta-feira\n");
+        break;
+    case 6:
+        printf ("sexta-feira\n");
+        break; 
+    case 7:
+        printf ("sábado\n");
+        break;   
+    case 0:
+        printf("fim do programa\n");
+    default :
+        printf("digite um número válido!\n");
+  } 
+  }while (x != 0);
+
+     return 0;
+}
