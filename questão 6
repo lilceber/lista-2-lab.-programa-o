@@ -1,7 +1,8 @@
 #include <stdio.h>
 int main() {
  int voto;
- int branco=0,nulo=0,r=0,p=0;
+ int branco=0,nulo=0,r=0,p=0,total=0;
+ float brancop,nulop,rp,pp;
  char c;
  printf("7 - renata\n5 - paulo\n0 - branco\n(digite um número negativo para encerrar a urna)\n\n");
  
@@ -31,7 +32,7 @@ int main() {
      nulo += 1;
      break;
             }
-    
+
         }  else if (c == 'n'){
          printf("voto cancelado");
         } else {
@@ -40,16 +41,25 @@ int main() {
 }
 }
     } while (voto >= 0);
-  
+ total = p + r + branco + nulo;   
+ pp = ((float) p / total) * 100;
+ rp = ((float) r / total) * 100;
+ brancop = ((float) branco / total) * 100;
+ nulop = ((float) nulo / total) * 100;
+ 
+ printf ("\n%.1f% = paulo \n",pp);
+  printf ("%.1f% = renata\n",rp);
+   printf ("%.1f% = brancos\n",brancop);
+    printf ("%.1f% = nulos\n",nulop);
+ 
  printf("\nquantidade de votos: \nrenata: %d\npaulo: %d\nnulos: %d\nbrancos: %d\n",r,p,nulo,branco);
  
  if(r > p){
-    printf("renanta foi eleita!");
+    printf("RENATA FOI ELEITA!");
 }else if(p > r){ 
-    printf("paulo foi eleito!");
+    printf("PAULO FOI ELEITO!");
 }else if(p == r){
-    printf("empate.");
+    printf("EMPATE.");
     }
-    
      return 0;
 }
