@@ -1,0 +1,55 @@
+#include <stdio.h>
+int main() {
+ int voto;
+ int branco=0,nulo=0,r=0,p=0;
+ char c;
+ printf("7 - renata\n5 - paulo\n0 - branco\n(digite um número negativo para encerrar a urna)\n\n");
+ 
+ do {
+     
+    printf("\nvote: ");
+    scanf("%d",&voto);
+    
+ if (voto >= 0) {  
+          
+            while (getchar() != '\n'); 
+    printf("você confirma seu voto? ");
+    scanf("%c",&c);
+  
+ if(c == 's'){
+    switch(voto){
+    case 7:
+     r += 1;
+     break;
+    case 5:
+     p += 1;
+     break;
+    case 0:
+     branco += 1;
+     break;
+    default:
+     nulo += 1;
+     break;
+            }
+    
+        }  else if (c == 'n'){
+         printf("voto cancelado");
+        } else {
+            printf("resposta inválida");
+      
+}
+}
+    } while (voto >= 0);
+  
+ printf("\nquantidade de votos: \nrenata: %d\npaulo: %d\nnulos: %d\nbrancos: %d\n",r,p,nulo,branco);
+ 
+ if(r > p){
+    printf("renanta foi eleita!");
+}else if(p > r){ 
+    printf("paulo foi eleito!");
+}else if(p == r){
+    printf("empate.");
+    }
+    
+     return 0;
+}
