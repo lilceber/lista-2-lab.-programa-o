@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <math.h>
+int main() {
+ float e,p,v,resto;
+ 
+ printf("insira o valor do produto desejado: ");
+  scanf("%f",&v);
+ 
+ resto = fmod(v,10);
+ p = (v - resto) /3;
+ e = p + resto;
+ 
+ printf("a entrada custa %.2f\ne as duas parcelas custam %.2f cada.",e,p);
+    return 0;
+}
