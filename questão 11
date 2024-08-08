@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <math.h>
+int main() {
+ int x,max,min,pot;
+
+printf("insira o maior múltiplo de 4 a ser elevado a 2: ");
+ scanf("%d",&max);
+printf("insira o menor múltiplo de 4 a ser elevado a 2: ");
+ scanf("%d",&min);
+
+if (max > min){
+    for (x = min; x >= min && x <= max;x+=4){
+    pot = (pow(x,2));
+    printf("%d\n",pot);
+    }
+} else if (min > max){
+    for (x = min; x <= min && x >= max;x-=4){
+    pot = (pow(x,2));
+    printf("%d\n",pot);
+    }
+  }
+    return 0;
+}
