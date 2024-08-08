@@ -1,15 +1,21 @@
 #include <stdio.h>
 int main() {
- float x,y,r;
+ float x,y = 0,r;
 printf("digite o primeiro valor: ");
  scanf("%f",&x);
+
+ 
+ do {
 printf("digite o segundo valor: ");
  scanf("%f",&y);
 
-  
-r = x / y;
-
-printf("resultado: %.1f",r);
-  
+if (y == 0){
+    printf("0 é inválido\n");
+    
+}else {
+    r = x / y;
+    printf("resultado: %.1f",r);  
+}
+} while (y == 0);
     return 0;
 }
