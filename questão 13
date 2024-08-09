@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <math.h>
+int main() {
+ int x,max,min,valor;
+
+printf("insira o maior número par do somatório: ");
+ scanf("%d",&max);
+printf("insira o menor número par do somatório: ");
+ scanf("%d",&min);
+
+if (max > min){
+    for (x = min;x <= max;x+=2){
+        valor += x;
+        
+    }
+} else if (min > max){
+    for (x = min; x <= min && x >= max;x-=2){
+        valor += x;
+    }
+  }
+  printf("%d",valor);
+    return 0;
+}
